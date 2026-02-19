@@ -19,9 +19,9 @@ public class Main {
         System.out.println(conta.numero);
 
         conta.depositar(1000);
-        System.out.println( conta.saldo);
+        System.out.println( "Depositou: " + conta.saldo);
 
         conta.sacar(750);
-        System.out.println(conta.saldo);
+        System.out.println("Valor do saldo: " + conta.saldo);
     }
 }
