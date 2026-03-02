@@ -9,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Random rd = new Random();
         Conta conta = new Conta();
-        double saldo;
+        Conta conta2 = new Conta();
 
         System.out.print("Nome do correntista: ");
         conta.correntista = sc.next();
@@ -19,9 +19,14 @@ public class Main {
         System.out.println(conta.numero);
 
         conta.depositar(1000);
-        System.out.println( "Depositou: " + conta.saldo);
+        System.out.println( "Saldo Atual(Depositou): " + conta.saldo);
 
-        conta.sacar(750);
-        System.out.println("Valor do saldo: " + conta.saldo);
+        conta.sacar(250);
+        System.out.println("Saldo Atual(Depois de sacar): " + conta.saldo);
+
+        //transferência da conta para conta2
+        conta.tranferir(390, conta2);
+        System.out.println("Saldo Atual(Após a transferência): " + conta.saldo);
+        System.out.println("Saldo da conta 2: " + conta2.saldo);
     }
 }

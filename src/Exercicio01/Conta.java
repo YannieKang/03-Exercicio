@@ -18,4 +18,11 @@ public class Conta {
 
         saldo = saldo - valor;
     }
+
+    public void tranferir(double valor, Conta destino){
+        sacar(valor);
+        destino.depositar(valor);
+    }
+
+
 }
